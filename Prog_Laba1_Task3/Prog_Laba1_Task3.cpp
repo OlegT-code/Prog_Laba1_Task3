@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include <cstdio>
+#pragma warning(disable:4996)
 
 using namespace std;
 int main()
@@ -7,13 +9,13 @@ int main()
     char* mystrcat(char* to, const char* from);
     char destStr[40], srcStr[20];
 
-    cout << "Enter destination string: "; cin >> destStr;
-    cout << "Enter source string: "; cin >> srcStr;
-    cout << "First Result: " << mystrcat(destStr, srcStr) << endl;
+    printf("Enter destination string: "); scanf("%s", &destStr);
+    printf("Enter source string: "); scanf("%s", &srcStr);
+    printf("First Result: %s \n", mystrcat(destStr, srcStr));
 
-    cout << "Enter source string: "; cin >> srcStr;
+    printf("Enter source string: "); scanf("%s", &srcStr);
     mystrcat(destStr, srcStr);
-    cout << "Second result: " << destStr;
+    printf("Second result: %s", destStr);
 
 }
 
